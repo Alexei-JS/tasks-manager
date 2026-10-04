@@ -18,15 +18,20 @@ public class TelegramAPI
 	
 	
 	public static void main(String[] args) {
-		System.out.println(introduction);
-		String request = scanner.nextLine().stripTrailing();
-		
-		while (!request.equals("/start")) {
-			System.out.println("Для начала функционирования бота введите команду `/start`");
-			request = scanner.nextLine().stripTrailing();
+    	System.out.println(introduction);
+    	System.out.println("Для начала функционирования бота введите команду `/start`\n");
+
+		while (isRunning) {
+			System.out.print("> ");
+			String request = scanner.nextLine().stripTrailing();
+
+			if (botActionTable.containsKey(request)) {
+				botActionTable.get(request).execute();
+			} else {
+				System.out.println("Бот не знает команду " + request);
+			}
 		}
-		botActionTable.get(request).execute();
-	}
+}
 	
 	public static boolean startBot() {
 		System.out.println("Телеграмм бот успешно запушен");
