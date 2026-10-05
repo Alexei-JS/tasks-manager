@@ -1,4 +1,4 @@
-package com.drivingSchool.ConsoleAPI;
+package com.drivingSchool.Information;
 
 import java.util.List;
 import java.util.Scanner;
