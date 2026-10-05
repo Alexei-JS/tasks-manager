@@ -5,6 +5,8 @@
 - **`TelegramAPI.java`**: команды `/start`, `/help`, `/deleteBot` с реальной логикой.
 - **`TelegramAPI.java`**: заглушки методов `enrollBot`, `statsBot`, `scheduleBot`.
 - **`TelegramAPI.java`**: регистрация команд `/enroll`, `/stats`, `/schedule` в `botActionTable`.
+- **`Student.java`**: класс-сущность курсанта (ФИО, возраст, категория, справка).
+- **`TelegramAPI.java`**: заглушки `enrollBot`, `statsBot`, `scheduleBot`.
 
 ### Изменено
 - **`TelegramAPI.java`**: `main` переработан в бесконечный цикл с флагом `isRunning`.
