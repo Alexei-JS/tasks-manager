@@ -2,6 +2,8 @@ package com.drivingSchool.ConsoleAPI;
 
 import java.util.Scanner;
 import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
 import com.drivingSchool.model.Student;
 
 
@@ -21,6 +23,7 @@ public class TelegramAPI
 	);
 	
 	private static Scanner scanner = new Scanner(System.in);
+	private static List<Student> students = new ArrayList<>();
 	
 	
 	public static void main(String[] args) {
@@ -60,8 +63,7 @@ public class TelegramAPI
 	}
 	
 	public static boolean enrollBot() {
-
-		return true;
+    	return EnrollmentForm.run(scanner, students);
 	}
 
 	public static boolean statsBot() {
