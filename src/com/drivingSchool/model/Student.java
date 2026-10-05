@@ -1,15 +1,11 @@
 package com.drivingSchool.model;
 
-/**
- * Курсант автошколы. Сущность предметной области.
- * Создаётся при заполнении анкеты через команду /enroll.
- */
 public class Student {
 
-    private String fullName;         // ФИО одной строкой
-    private int age;                 // полных лет
-    private String category;         // категория: A, B, C, BC и т.п.
-    private boolean hasMedicalCert;  // получена ли справка от медкомиссии
+    private String fullName;
+    private int age;
+    private String category;
+    private boolean hasMedicalCert;
 
     public Student(String fullName, int age, String category, boolean hasMedicalCert) {
         this.fullName = fullName;
@@ -34,7 +30,6 @@ public class Student {
         return hasMedicalCert;
     }
 
-    @Override
     public String toString() {
         return String.format("%s, %d лет, категория %s, справка: %s",
                 fullName, age, category, hasMedicalCert ? "есть" : "нет");

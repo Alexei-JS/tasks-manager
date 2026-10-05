@@ -10,13 +10,6 @@ import com.drivingSchool.model.Student;
  */
 public class EnrollmentForm {
 
-    /**
-     * Запускает сценарий заполнения анкеты.
-     *
-     * @param scanner   сканер, из которого читаем ввод пользователя
-     * @param students  список, в который добавим нового студента
-     * @return          true — бот продолжает работу
-     */
     public static boolean run(Scanner scanner, List<Student> students) {
         System.out.println("--- Запись на курс ---");
 
