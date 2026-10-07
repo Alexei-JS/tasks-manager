@@ -1,4 +1,4 @@
-package com.drivingSchool.ConsoleAPI;
+package com.drivingSchool.API;
 
 import java.util.Scanner;
 import java.util.Map;
@@ -9,7 +9,7 @@ import com.drivingSchool.Information.EnrollmentForm;
 import com.drivingSchool.model.Student;
 
 
-public class TelegramAPI
+public class ConsoleAPI
 {
 	private static String  introduction = "Здравствуйте! Я — консольный бот автошколы.\n" +
 				"Я помогу вам записаться на курс, узнать расписание и посмотреть статистику.\n" +
@@ -26,24 +26,7 @@ public class TelegramAPI
 	
 	private static Scanner scanner = new Scanner(System.in);
 	private static List<Student> students = new ArrayList<>();
-	
-	
-	public static void main(String[] args) {
-    	System.out.println(introduction);
-    	System.out.println("Для начала функционирования бота введите команду `/start`\n");
 
-		boolean isRunning = true;
-		while (isRunning) {
-			System.out.print("> ");
-			String request = scanner.nextLine().stripTrailing();
-
-			if (botActionTable.containsKey(request)) {
-				isRunning = botActionTable.get(request).execute();
-			} else {
-				System.out.println("Бот не знает команду " + request);
-			}
-		}
-	}
 	
 	public static boolean startBot() {
 		System.out.println(introduction);
